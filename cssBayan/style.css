@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: bisque;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+p{
+    margin: 0 0 5px;
+}
+/* FAQ */
+.bayan{
+    max-width: 500px;
+    margin: 20px auto;
+}
+.bayan__item{
+    margin-bottom: 5px;
+    border: 1px solid #000000;
+}
+.bayan__title{
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+
+    color: rgb(104, 109, 202);
+    cursor: pointer;
+
+    transition: background .2s ease-out;
+}
+.bayan__title:after{
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+.bayan__content{
+    margin: 0 85px;
+    cursor: pointer;
+}
+.bayan__title:hover{
+    background-color: #fff;
+}
+.bayan__input{
+    width: 0;
+    height: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.bayan__input:checked ~ .bayan__title{
+    background-color: #fff;
+    color: #000;
+}
+.bayan__input:checked ~ .bayan__title::after{
+    border-style: solid;
+    border-width: 0px 5px 8px 5px;
+    border-color: transparent transparent #000 transparent;
+}
+.bayan__input:checked ~ .bayan__content{
+    display: block;
+}
+.bayan__content{
+    display: none;
+}
+.bayan:hover .bayan__title{
+    color: black;
+}
+@media (max-width: 500px){
+    .photo{
+        width: 100px;
+        height: 100px;
+        margin-left: 40px;
+    }
+}
